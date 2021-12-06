@@ -34,15 +34,19 @@ console.log(me)
 
 console.log('\n Exercise 6')
 console.log('\n Write a piece of code for programmatically adding to the me object you defined before an array called skills, containing the programming languages you know right now.')
-/* EXERCISE G
-   Write a piece of code for programmatically removing the last skill from the skills array inside the me object.
-*/
 
+me.skills=['html', 'css', 'Javascript']
+console.log(me)
+
+console.log('\n Exercise 7')
+console.log('\n Write a piece of code for programmatically removing the last skill from the skills array inside the me object.')
+
+delete me.skills
+console.log(me)
 // JS Functions
-/* EXERCISE 1
-    Write a function called dice; it should randomize an integer number between 1 and 6.
-*/
 
+console.log('\n Exercise 7')
+console.log('\n  Write a function called dice; it should randomize an integer number between 1 and 6.')
 /* EXERCISE 2
     Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
 */
