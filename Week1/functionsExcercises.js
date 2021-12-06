@@ -45,17 +45,23 @@ delete me.skills
 console.log(me)
 // JS Functions
 
-console.log('\n Exercise 7')
+console.log('\n Exercise 8')
 console.log('\n  Write a function called dice; it should randomize an integer number between 1 and 6.')
-/* EXERCISE 2
-    Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
-*/
+const dice = Math.floor(Math.random() * 7)
+console.log(dice)
 
-/* EXERCISE 3
-    Write a function called splitMe which receives a string as a parameter and returns an array with every word in that string.
-    Ex.: splitMe("I love coding") => returns ["I", "Love", "Coding"]
-*/
 
+console.log('\n Exercise 9')
+console.log('\n  Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one')
+
+const whoIsBigger = (num1, num2) => Math.max(num1, num2)
+console.log(whoIsBigger(4,7))
+
+console.log('\n Exercise 10')
+console.log('\n  Write a function called splitMe which receives a string as a parameter and returns an array with every word in that string. Ex.: splitMe("I love coding") => returns ["I", "Love", "Coding"]')
+
+const splitMe = str => str.split(' ')
+console.log(splitMe('i am being splitted by the function' ))
 /* EXERCISE 4
     Write a function called deleteOne which receives a string and a boolean as parameters.
     If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
