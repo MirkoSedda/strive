@@ -85,10 +85,7 @@ console.log(
 const deleteOne = (str, boolean) =>
   boolean === true ? str.slice(1) : str.slice(0, -1)
 console.log(deleteOne('hello'))
-/* EXERCISE 5
-   Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits.
-   Ex.: onlyLetters("I have 4 dogs") => returns "I have  dogs"
-*/
+
 console.log('\n Exercise 11')
 console.log(
   '\n  Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits. Ex.: onlyLetters("I have 4 dogs") => returns "I have  dogs"'
@@ -96,13 +93,47 @@ console.log(
 
 const onlyLetters = str => str.replace(/[0-9]/g, '')
 console.log(onlyLetters('hell0, 1 am a str1ng w1th numb3rs'))
-/* EXERCISE 6
-   Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
-*/
 
-/* EXERCISE 7
-   Write a function called whatDayIsIt that should return the current day of the week.
-*/
+console.log('\n Exercise 12')
+console.log(
+  '\n  Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.'
+)
+
+const isThisAnEmail = emailAddress => {
+  let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+  if (emailAddress.match(regexEmail)) {
+    return true
+  } else {
+    return false
+  }
+}
+console.log(isThisAnEmail('kunay69@hotmail.it'))
+
+console.log('\n Exercise 13')
+console.log(
+  '\n  Write a function called whatDayIsIt that should return the current day of the week.'
+)
+
+const whatDayIsIt = () => {
+  const today = new Date().getDay()
+  today === 0
+    ? 'Sunday'
+    : today === 1
+    ? 'Monday'
+    : today === 2
+    ? 'Tuesday'
+    : today === 3
+    ? 'wednesday'
+    : today === 4
+    ? 'Thursday'
+    : today === 5
+    ? 'Friday'
+    : today === 6
+    ? 'Saturday'
+    : null
+  console.log(today)
+}
+console.log(whatDayIsIt())
 
 /* EXERCISE 8
     Write a function called rollTheDices which receives a number as a parameter.
@@ -114,15 +145,30 @@ console.log(onlyLetters('hell0, 1 am a str1ng w1th numb3rs'))
         values: [3, 3, 4]
     }
 */
+console.log('\n Exercise 14')
+console.log(
+  '\n   Write a function called rollTheDices which receives a number as a parameter. It should invoke the dice() function defined in Ex1 the specified amount of times, and return an object containing a sum property holding the sum of all values extracted and a values array containing the single values of the dicerolls themselves. Example: RollTheDices(3) => returns { sum: 10 values: [3, 3, 4]} '
+)
 
-/* EXERCISE 9
-   Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
-*/
+const rollTheDices = num => {
+  let result = []
+  const dice = Math.floor(Math.random() * 7)
+  for (let i = 0; i < num; i++) {
+    result.push(dice)
+  }
+}
+console.log(rollTheDices(3))
 
-/* EXERCISE 10
-   Write a function called isTodayMyBirthday which should return true if today's your birthday, false otherwise.
-*/
+console.log('\n Exercise 15')
+console.log(
+  '\n  Write a function called isTodayMyBirthday which should return true if today s your birthday, false otherwise.'
+)
 
+const isTodayMyBirthday = () => {
+  let birthday = new Date('1986-04-04')
+  let today = new Date()
+  console.log(today)
+}
 // JS Arrays & Objects
 // NOTE: the movies array used in some exercises is defined at the end of this file
 
@@ -130,7 +176,14 @@ console.log(onlyLetters('hell0, 1 am a str1ng w1th numb3rs'))
    Write a function called deleteProp which receives an object and a string as parameters,
    and returns the given object after deleting its property named as the given string.
 */
-
+console.log('\n Exercise 15')
+console.log(
+  '\n  Write a function called deleteProp which receives an object and a string as parameters, and returns the given object after deleting its property named as the given string.'
+)
+const deleteProp = (obj, string) => {
+  return delete obj.string
+}
+console.log(deleteProp({ name: 'Mirko', surname: 'Sedda' }, 'surname'))
 /* EXERCISE 12
     Write a function called oldestMovie which finds the oldest movie in the provided movies array.
 */
