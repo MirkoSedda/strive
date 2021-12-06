@@ -94,6 +94,22 @@ console.log(
 const onlyLetters = str => str.replace(/[0-9]/g, '')
 console.log(onlyLetters('hell0, 1 am a str1ng w1th numb3rs'))
 
+let strive = 'i love coding 32 hzrje 432 df 4  6 7 8 9 kukug'
+
+/*const onlyLetters = function () {
+  let striveLetters = ' '
+  for (i = 0; i < strive.length; i++) {
+    // console.log(typeof parseInt("aosduhifasio"))
+
+    if (!Number.isSafeInteger(parseInt(strive[i]))) striveLetters += strive[i]
+  }
+  return striveLetters
+}
+
+console.log(typeof NaN)
+console.log(onlyLetters(strive))
+*/
+
 console.log('\n Exercise 12')
 console.log(
   '\n  Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.'
@@ -115,25 +131,20 @@ console.log(
 )
 
 const whatDayIsIt = () => {
-  const today = new Date().getDay()
-  today === 0
-    ? 'Sunday'
-    : today === 1
-    ? 'Monday'
-    : today === 2
-    ? 'Tuesday'
-    : today === 3
-    ? 'wednesday'
-    : today === 4
-    ? 'Thursday'
-    : today === 5
-    ? 'Friday'
-    : today === 6
-    ? 'Saturday'
-    : null
-  console.log(today)
+  const weekDay = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ]
+
+  const today = new Date()
+  let day = weekDay[today.getDay()]
+  console.log(day)
 }
-console.log(whatDayIsIt())
 
 /* EXERCISE 8
     Write a function called rollTheDices which receives a number as a parameter.
