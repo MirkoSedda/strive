@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+  .hidden {
+      visibility: hidden;
+  }
+</style>
     <title>Document</title>
 </head>
 <body id="body">
 <h1 id="title">Mirko & Giorgio Shop</h1>
+<button onclick="toggle()">Hide/show images</button>
 <table>
   <tr>
     <td>CPU</td>
@@ -129,21 +135,29 @@
             linkClass[i].classList.add("link")
         }   
         }
-       const addClass = () => {
+        const addClass = () => {
          let images = document.querySelectorAll("img")
         for (let i = 0; i < images.length; i++){
             images[i].classList.add("hidden")
         } 
-       }
+       } 
        addClass()
-        
-       let prices = document.querySelectorAll(".price");
+        let colorChange = () => {
+          let prices = document.querySelectorAll(".price");
        for (let i = 0; i < prices.length; i++){
         let colors = ['#ff0000', '#00ff00', '#0000ff'];
         let randomColor = colors[Math.floor(Math.random() * colors.length)];  
         prices[i].style.color = randomColor
+        }   
+        }
+       colorChange()
+       
+       const toggle = () => {
+           let imgSelector = document.querySelectorAll(".hidden");
+           for (let i = 0; i < imgSelector.length; i++){
+            imgSelector[i].classList.toggle("hidden")
         } 
-        
+       }
     </script>
 </body>
 </html>
