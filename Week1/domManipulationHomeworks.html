@@ -33,7 +33,7 @@
       >
     </td>
     <td>high end processor</td>
-    <td>350€</td>
+    <td class="price">350€</td>
   </tr>
   <tr>
     <td>Ryzen 5</td>
@@ -52,7 +52,7 @@
       >
     </td>
     <td>medium processor</td>
-    <td>295€</td>
+    <td class="price">295€</td>
   </tr>
   <td>Ryzen 3</td>
     <td>
@@ -70,7 +70,7 @@
       >
     </td>
     <td>basic processor</td>
-    <td>320€</td>
+    <td class="price">320€</td>
   </tr>
   <td>Intel i7</td>
     <td>
@@ -88,7 +88,7 @@
       >
     </td>
     <td>high end processor</td>
-    <td>340€</td>
+    <td class="price">340€</td>
   </tr>
   <td>Intel i5</td>
     <td>
@@ -106,7 +106,7 @@
       >
     </td>
     <td>high end processor</td>
-    <td>390€</td>
+    <td class="price">390€</td>
   </tr>
 </table>
 <h2>Please write us your message:</h2>
@@ -123,11 +123,27 @@
         backGroundFunc()
         const addressFunc = () => document.getElementById("footer").innerText = "Via Napoli 666, Rome" 
         addressFunc() 
-        let linkClass = document.querySelectorAll("a");
+        const linkFunc = () => {
+         let linkClass = document.querySelectorAll("a");
         for (let i = 0; i < linkClass.length; i++){
             linkClass[i].classList.add("link")
+        }   
         }
-        console.log(linkClass)
+       const addClass = () => {
+         let images = document.querySelectorAll("img")
+        for (let i = 0; i < images.length; i++){
+            images[i].classList.add("hidden")
+        } 
+       }
+       addClass()
+        
+       let prices = document.querySelectorAll(".price");
+       for (let i = 0; i < prices.length; i++){
+        let colors = ['#ff0000', '#00ff00', '#0000ff'];
+        let randomColor = colors[Math.floor(Math.random() * colors.length)];  
+        prices[i].style.color = randomColor
+        } 
+        
     </script>
 </body>
 </html>
