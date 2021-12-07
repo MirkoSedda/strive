@@ -130,24 +130,24 @@
         const addressFunc = () => document.getElementById("footer").innerText = "Via Napoli 666, Rome" 
         addressFunc() 
         const linkFunc = () => {
-         let linkClass = document.querySelectorAll("a");
+        let linkClass = document.querySelectorAll("a");
         for (let i = 0; i < linkClass.length; i++){
             linkClass[i].classList.add("link")
         }   
         }
         const addClass = () => {
          let images = document.querySelectorAll("img")
-        for (let i = 0; i < images.length; i++){
+         for (let i = 0; i < images.length; i++){
             images[i].classList.add("hidden")
         } 
        } 
        addClass()
         let colorChange = () => {
-          let prices = document.querySelectorAll(".price");
-       for (let i = 0; i < prices.length; i++){
-        let colors = ['#ff0000', '#00ff00', '#0000ff'];
-        let randomColor = colors[Math.floor(Math.random() * colors.length)];  
-        prices[i].style.color = randomColor
+        let prices = document.querySelectorAll(".price");
+        for (let i = 0; i < prices.length; i++){
+            let colors = ['#ff0000', '#00ff00', '#0000ff'];
+            let randomColor = colors[Math.floor(Math.random() * colors.length)];  
+            prices[i].style.color = randomColor
         }   
         }
        colorChange()
@@ -155,9 +155,16 @@
        const toggle = () => {
            let imgSelector = document.querySelectorAll(".hidden");
            for (let i = 0; i < imgSelector.length; i++){
-            imgSelector[i].classList.toggle("hidden")
+                imgSelector[i].classList.toggle("hidden")
+                imgSelector[i].classList === "hidden" ? "visible" : "hidden";
         } 
        }
     </script>
 </body>
 </html>
+<!-- const toggle = () => {
+           let imgSelector = document.querySelectorAll(".hidden");
+           for (let i = 0; i < imgSelector.length; i++){
+            imgSelector[i].classList === "hidden" ? "visible" : "hidden";
+        } 
+       }  -->
