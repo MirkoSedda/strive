@@ -124,6 +124,11 @@ console.log(deleteOne('hello'))
    Ex.: onlyLetters("I have 4 dogs") => returns "I have  dogs"
 */
 
+console.log('\n Exercise 5')
+
+const onlyLetters = str => str.replace(/[0-9]/g, '')
+console.log(onlyLetters('hell0, 1 am a str1ng w1th numb3rs'))
+
 /* EXERCISE 6
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
 */

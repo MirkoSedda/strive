@@ -35,57 +35,48 @@ console.log(
   '\n Write a piece of code for programmatically adding to the me object you defined before an array called skills, containing the programming languages you know right now.'
 )
 
-me.skills = ['html', 'css', 'Javascript']
-console.log(me)
+
 
 console.log('\n Exercise 7')
 console.log(
   '\n Write a piece of code for programmatically removing the last skill from the skills array inside the me object.'
 )
 
-delete me.skills
-console.log(me)
+
 // JS Functions
 
 console.log('\n Exercise 8')
 console.log(
   '\n  Write a function called dice; it should randomize an integer number between 1 and 6.'
 )
-const dice = Math.floor(Math.random() * 7)
-console.log(dice)
 
 console.log('\n Exercise 9')
 console.log(
   '\n  Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one'
 )
 
-const whoIsBigger = (num1, num2) => Math.max(num1, num2)
-console.log(whoIsBigger(4, 7))
+
 
 console.log('\n Exercise 10')
 console.log(
   '\n  Write a function called splitMe which receives a string as a parameter and returns an array with every word in that string. Ex.: splitMe("I love coding") => returns ["I", "Love", "Coding"]'
 )
 
-const splitMe = str => str.split(' ')
-console.log(splitMe('i am being splitted by the function'))
+
 
 console.log('\n Exercise 11')
 console.log(
   '\n  Write a function called deleteOne which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.'
 )
 
-const deleteOne = (str, boolean) =>
-  boolean === true ? str.slice(1) : str.slice(0, -1)
-console.log(deleteOne('hello'))
+
 
 console.log('\n Exercise 11')
 console.log(
   '\n  Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits. Ex.: onlyLetters("I have 4 dogs") => returns "I have  dogs"'
 )
 
-const onlyLetters = str => str.replace(/[0-9]/g, '')
-console.log(onlyLetters('hell0, 1 am a str1ng w1th numb3rs'))
+
 
 let strive = 'i love coding 32 hzrje 432 df 4  6 7 8 9 kukug'
 
