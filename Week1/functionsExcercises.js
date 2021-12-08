@@ -129,13 +129,39 @@ console.log('\n Exercise 5')
 const onlyLetters = str => str.replace(/[0-9]/g, '')
 console.log(onlyLetters('hell0, 1 am a str1ng w1th numb3rs'))
 
+//Luis alternative function
+// const strive = 'i love coding 32 hzrje 432 df 4  6 7 8 9 kukug'
+// const onlyLetters = () => {
+//   let striveLetters = ' '
+//   for (i = 0; i < strive.length; i++) {
+//     if (!Number.isSafeInteger(parseInt(strive[i]))) striveLetters += strive[i]
+//   }
+//   return striveLetters
+// }
+// console.log(typeof NaN)
+// console.log(onlyLetters(strive))
+
 /* EXERCISE 6
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
 */
 
+console.log('\n Exercise 6')
+
+const isThisAnEmail = emailAddress => {
+  let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+  if (emailAddress.match(regexEmail)) {
+    return true
+  } else {
+    return false
+  }
+}
+console.log(isThisAnEmail('kunay69@hotmail.it'))
+
 /* EXERCISE 7
    Write a function called whatDayIsIt that should return the current day of the week.
 */
+
+console.log('\n Exercise 7')
 
 /* EXERCISE 8
     Write a function called rollTheDices which receives a number as a parameter.
