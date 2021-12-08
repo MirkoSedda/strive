@@ -59,7 +59,7 @@
        Write a function for changing the title of the document in something else.
       */
       const changeTitle = newTitle => {
-        let title = document.getElementById('title')
+        const title = document.getElementById('title')
         title.innerText = 'Im a new title'
       }
       changeTitle()
@@ -68,7 +68,7 @@
       */
 
       const addClassToTitle = () => {
-        let title = document.getElementById('title')
+        const title = document.getElementById('title')
         title.classList.add('myHeading')
       }
       addClassToTitle()
@@ -77,7 +77,7 @@
       */
 
       const changePcontent = () => {
-        let children = document.querySelectorAll('div p')
+        const children = document.querySelectorAll('div p')
         for (let i = 0; i < children.length; i++) {
           children[i].innerText = 'im a child of a div'
         }
@@ -89,7 +89,7 @@
       */
 
       const changeUrls = () => {
-        let aTags = document.querySelectorAll('a')
+        const aTags = document.querySelectorAll('a')
         for (let i = 0; i < aTags.length; i++) {
           aTags[i].href = 'http://www.google.com/'
         }
@@ -100,10 +100,18 @@
        Write a function for adding a new list item in the second unordered list.
       */
 
-      const addToTheSecond = function (content) {
-        //
-      }
+      const addToTheSecond = content => {
+        const node = document.createElement('li') // Create a <li> node
 
+        const textnode = document.createTextNode(
+          'im a new li created by javascript'
+        ) // Create a text node
+
+        node.appendChild(textnode) // Append the text to <li>
+
+        document.getElementById('').appendChild(node)
+      }
+      addToTheSecond()
       /* EXERCISE 6
        Write a function for adding a second paragraph to the first div.
       */
