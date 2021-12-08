@@ -86,7 +86,7 @@ console.log(me)
 
 console.log('\n Exercise 1')
 
-const dice = Math.floor(Math.random() * 7)
+const dice = () => Math.floor(Math.random() * 7)
 console.log(dice)
 
 /* EXERCISE 2
@@ -164,7 +164,15 @@ console.log(isThisAnEmail('kunay69@hotmail.it'))
 console.log('\n Exercise 7')
 
 const whatDayIsIt = function () {
-  let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+  let days = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ]
   return days[new Date().getDay()]
 }
 console.log(whatDayIsIt())
@@ -178,6 +186,24 @@ console.log(whatDayIsIt())
         values: [3, 3, 4]
     }
 */
+
+console.log('\n Exercise 8')
+
+const rollTheDices = num => {
+  let result = {
+    sum: 0,
+    values: [],
+  }
+
+  for (let i = 0; i < num; i++) {
+    let diceRoll = dice()
+    result.sum += diceRoll
+    result.values.push(diceRoll)
+  }
+
+  return result
+}
+console.log(rollTheDices(3))
 
 /* EXERCISE 9
    Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
