@@ -147,13 +147,10 @@
        Make the heading of the page change color every time the user clicks on it.
       */
 
-      const makeItClickable = () => {
-        const random = '#' + Math.floor(Math.random() * 16777215).toString(16)
-
-        title.style.color = random
-        console.log(random)
-      }
-
+      document.getElementById('title').addEventListener('click', function () {
+        let random = '#' + Math.floor(Math.random() * 16777215).toString(16)
+        document.getElementById('title').style.color = random
+      })
       /* EXERCISE 10
        Change the footer text with something else when the user clicks on it.
       */
