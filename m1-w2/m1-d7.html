@@ -10,9 +10,7 @@
   </head>
   <body>
     <div>
-      <h1 id="title" onclick="makeItClickable">
-        This is the title of the page
-      </h1>
+      <h1 id="title">This is the title of the page</h1>
       <h2>This is the subtitle of the page</h2>
     </div>
 
@@ -165,8 +163,12 @@
        Attach an event listener to the input field in the page for console logging its value just after any keystroke.
       */
 
-      const inputField = document.getElementById('input-field')
-      // ...
+      const inputField = document
+        .getElementById('input-field')
+        .addEventListener('keyup', logKey)
+      function logKey(e) {
+        console.log(e.target.value)
+      }
 
       /* EXERCISE 12
        Create a welcome alert message when the page successfully loads.
