@@ -163,6 +163,11 @@ console.log(isThisAnEmail('kunay69@hotmail.it'))
 
 console.log('\n Exercise 7')
 
+const whatDayIsIt = function () {
+  let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+  return days[new Date().getDay()]
+}
+console.log(whatDayIsIt())
 /* EXERCISE 8
     Write a function called rollTheDices which receives a number as a parameter.
     It should invoke the dice() function defined in Ex1 the specified amount of times,
