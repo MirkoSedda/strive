@@ -55,6 +55,7 @@
         Save this page on your computer and open it with VSCode to get the
         questions!
       </h2>
+      <footer id="footer">here i am!</footer>
     </div>
     <script>
       /* EXERCISE 1
@@ -155,10 +156,11 @@
        Change the footer text with something else when the user clicks on it.
       */
 
-      const changeFooterText = function () {
-        //
+      const changeFooterText = () => {
+        document.getElementById('footer').innerText =
+          'here i am, but im another one lol'
       }
-
+      changeFooterText()
       /* EXERCISE 11
        Attach an event listener to the input field in the page for console logging its value just after any keystroke.
       */
