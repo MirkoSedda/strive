@@ -227,6 +227,19 @@ console.log(date)
 
 console.log('\n Exercise 10')
 
+const isTodayMyBirthday = () => {
+  let today = new Date()
+  let myBirthday = new Date(1986, 4, 4)
+  let isTodayMyBirthday = false
+  if (
+    today.getDay() === myBirthday.getDay() &&
+    today.getMonth() === myBirthday.getMonth()
+  ) {
+    isTodayMyBirthday = true
+  }
+  return isTodayMyBirthday
+}
+console.log(isTodayMyBirthday())
 // JS Arrays & Objects
 // NOTE: the movies array used in some exercises is defined at the end of this file
 
@@ -234,6 +247,14 @@ console.log('\n Exercise 10')
    Write a function called deleteProp which receives an object and a string as parameters,
    and returns the given object after deleting its property named as the given string.
 */
+
+console.log('\n Exercise 11')
+
+const deleteProp = (obj, string) => {
+  return delete obj.string
+}
+console.log(deleteProp({ name: 'Mirko', surname: 'Sedda' }, 'surname'))
+
 //moved the movie array here so it is accessible below from
 
 const movies = [
@@ -355,6 +376,23 @@ const movies = [
     Write a function called oldestMovie which finds the oldest movie in the provided movies array.
 */
 
+console.log('\n Exercise 12')
+
+// const oldestMovie = movies => {
+//   let arr = [0]
+//   let movie = []
+//   for (let i = 0; i < movies.length; i++) {
+//     let year = parseInt(movies[i].Year)
+//     if (year > arr) {
+//       arr.push(parseInt(movies[i].Year))
+//       movie.push(movies[i])
+//     }
+//     return movie
+//   }
+// }
+
+// console.log(oldestMovie(movies))
+
 /* EXERCISE 13
     Write a function called countMovies which returns the number of movies contained in the provided movies array.
 */
@@ -385,9 +423,35 @@ const movies = [
     and another array unmatch with all the remaining ones.
 */
 
+// const searchAndDivide = x => {
+//   const result = {}
+//   const match = searchByTitle(x)
+//   result.match = match
+//   const unmatch = []
+//   for (let i = 0; i < movies.length; i++) {
+//     let title = movies[i].Title
+//     if (!title.includes(x)) unmatch.push(title) //not ! reverse method
+//   }
+//   const answer = [match, unmatch]
+//   return answer
+// }
+
+// console.log(searchAndDivide('Rings'))
+
 /* EXERCISE 20
-   Write a function called "removeIndex" which receives a number as a parameter and returns the provided movies array without the element in the given position.
+   Write a function called "removeIndex" which receives a number as a parameter and returns the list of the movies titles array without the element in the given position.
 */
+
+// function removeIndex(index) {
+//   let removedFilm = movies.splice(index, 1)
+//   let moviesTitles = []
+//   for (let i = 0; i < movies.length; i++) {
+//     moviesTitles.push(movies[i].Title)
+//   }
+//   return moviesTitles
+// }
+// removeIndex(3)
+// console.log(removeIndex(0))
 
 // [EXTRAS] JS Advanced
 
