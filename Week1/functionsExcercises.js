@@ -113,6 +113,12 @@ console.log(splitMe('i am being splitted by the function'))
     If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
 
+console.log('\n Exercise 4')
+
+const deleteOne = (str, boolean) =>
+  boolean === true ? str.slice(1) : str.slice(0, -1)
+console.log(deleteOne('hello'))
+
 /* EXERCISE 5
    Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs") => returns "I have  dogs"
