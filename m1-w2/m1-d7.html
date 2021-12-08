@@ -88,9 +88,13 @@
        Write a function for changing the href property of every link to https://www.google.com
       */
 
-      const changeUrls = function () {
-        //
+      const changeUrls = () => {
+        let aTags = document.querySelectorAll('a')
+        for (let i = 0; i < aTags.length; i++) {
+          aTags[i].href = 'http://www.google.com/'
+        }
       }
+      changeUrls()
 
       /* EXERCISE 5
        Write a function for adding a new list item in the second unordered list.
