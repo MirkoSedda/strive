@@ -10,7 +10,9 @@
   </head>
   <body>
     <div>
-      <h1 id="title">This is the title of the page</h1>
+      <h1 id="title" onclick="makeItClickable">
+        This is the title of the page
+      </h1>
       <h2>This is the subtitle of the page</h2>
     </div>
 
@@ -112,22 +114,20 @@
        Write a function for adding a second paragraph to the first div.
       */
 
-      // const addParagraph = () => {
-      //   const node = document.createElement('p')
-      //   document.querySelector('div').appendChild(node)
-      //   //document.getElementById('content').appendChild(div);
-      //   var x = document.getElementsByTagName('p')
-      //   console.log(x)
-      // }
-      // addParagraph()
-
+      const addParagraph = content => {
+        const newParagraph = document.createElement('p')
+        newParagraph.innerText = 'I am a 2nd paragraph to the 1st div'
+        const parentNode = document.getElementsByTagName('div')
+        parentNode[0].appendChild(newParagraph)
+      }
+      addParagraph()
       /* EXERCISE 7
        Write a function for making the first unordered list disappear.
       */
 
       const firstUlDisappear = () => {
-        uoList = document.getElementById('firstList')
-        uoList.hidden = true
+        const ulList = document.getElementById('firstList')
+        ulList.hidden = true
       }
       firstUlDisappear()
 
@@ -135,16 +135,23 @@
        Write a function for making the background of every unordered list green.
       */
 
-      const paintItGreen = function () {
-        //
+      const paintItGreen = () => {
+        let ulLists = document.getElementsByTagName('ul')
+        for (let ulList of ulLists) {
+          ulList.style.backgroundColor = 'green'
+        }
       }
+      paintItGreen()
 
       /* EXERCISE 9
        Make the heading of the page change color every time the user clicks on it.
       */
 
-      const makeItClickable = function () {
-        //
+      const makeItClickable = () => {
+        const random = '#' + Math.floor(Math.random() * 16777215).toString(16)
+
+        title.style.color = random
+        console.log(random)
       }
 
       /* EXERCISE 10
