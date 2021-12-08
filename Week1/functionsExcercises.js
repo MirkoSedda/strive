@@ -93,10 +93,17 @@ console.log(dice)
     Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
 */
 
+console.log('\n Exercise 2')
+
+const whoIsBigger = (num1, num2) => Math.max(num1, num2)
+console.log(whoIsBigger(4, 7))
+
 /* EXERCISE 3
     Write a function called splitMe which receives a string as a parameter and returns an array with every word in that string.
     Ex.: splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
+
+console.log('\n Exercise 3')
 
 /* EXERCISE 4
     Write a function called deleteOne which receives a string and a boolean as parameters.
