@@ -209,9 +209,23 @@ console.log(rollTheDices(3))
    Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
 */
 
+console.log('\n Exercise 9')
+
+const howManyDays = selectedDate => {
+  const today = Date.now()
+  const selectedInMilliseconds = Date.parse(selectedDate) //ms
+  return Math.floor((today - selectedInMilliseconds) / (1000 * 60 * 60 * 24))
+}
+
+let date = howManyDays('4 apr 1986')
+
+console.log(date)
+
 /* EXERCISE 10
    Write a function called isTodayMyBirthday which should return true if today's your birthday, false otherwise.
 */
+
+console.log('\n Exercise 10')
 
 // JS Arrays & Objects
 // NOTE: the movies array used in some exercises is defined at the end of this file
