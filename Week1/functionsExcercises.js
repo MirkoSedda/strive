@@ -43,6 +43,15 @@ console.log(random)
     Create a variable called me and assign to it an object containing the following information: name = your name, surname = your surname, age = your age.
 */
 
+console.log('\n Exercise D')
+
+const me = {
+  name: 'Mirko',
+  surname: 'Sedda',
+  age: 35,
+}
+console.log(me)
+
 /* EXERCISE E
     Write a piece of code for programmatically removing the age property from the previously create object.
 */
