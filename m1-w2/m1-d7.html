@@ -58,7 +58,7 @@
       /* EXERCISE 1
        Write a function for changing the title of the document in something else.
       */
-      const changeTitle = function (newTitle) {
+      const changeTitle = newTitle => {
         let title = document.getElementById('title')
         title.innerText = 'Im a new title'
       }
@@ -67,7 +67,7 @@
        Write a function for changing the class of the title of the page in "myHeading".
       */
 
-      const addClassToTitle = function () {
+      const addClassToTitle = () => {
         let title = document.getElementById('title')
         title.classList.add('myHeading')
       }
@@ -76,10 +76,14 @@
        Write a function for changing the text of only the p which are children of a div.
       */
 
-      const changePcontent = function () {
-        //
+      const changePcontent = () => {
+        let children = document.querySelectorAll('div p')
+        for (let i = 0; i < children.length; i++) {
+          children[i].innerText = 'im a child of a div'
+        }
+        console.log(children)
       }
-
+      changePcontent()
       /* EXERCISE 4
        Write a function for changing the href property of every link to https://www.google.com
       */
