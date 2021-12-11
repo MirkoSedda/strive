@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <!--
-        18) Create a class to hide a piece of content
         19) Add a green border to each <td>
         20) Add a dotted red border to each <tr> (note: <tr> does not accept a border property)
 
@@ -80,12 +79,15 @@
       font-size: 40px;
       font-weight: bold
     }
+    .hidden {
+      visibility:hidden;
+    }
   </style>
   <head>
     <title>M1-d10</title>
   </head>
   <body>
-    <h1 class="border font">Im a heading</h1>
+    <h1 class="border font ">Im a heading</h1>
     <ol>
       <li>element one</li>
       <li>element two</li>
@@ -142,7 +144,7 @@
       <ul>
         <li>im an li</li>
       </ul>
-      <footer>im a footer</footer>
+      <footer class="hidden>im a footer</footer>
     </div>
   </body>
 </html>
