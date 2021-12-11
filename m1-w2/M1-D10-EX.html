@@ -205,6 +205,17 @@
         console.log(num)
       }
       biggestNumber()
+
+      let containerArr = []
+      for (let i = 0; i < 10; i++) {
+        let randomNumber = Math.floor(Math.random() * 50)
+        let randomNumberArray = []
+        for (let i = 0; i < 1; i++) {
+          randomNumberArray.push(randomNumber)
+        }
+        containerArr.push(randomNumberArray)
+      }
+      console.log(containerArr)
     </script>
   </body>
 </html>
