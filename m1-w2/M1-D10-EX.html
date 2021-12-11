@@ -175,6 +175,36 @@
         r.push(Math.floor(Math.random() * 100) + 1)
       }
       console.log(r)
+
+      let min = 100
+      for (let i = 0; i < r.length; i++) {
+        if (r[i] < min) {
+          min = r[i]
+        } else min
+      }
+      console.log(min)
+      const smallestNumber = () => {
+        let arr = [5, 6, 7, 8, 9, 10, 11, 12]
+        let num = 12
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] < num) {
+            num = arr[i]
+          } else num
+        }
+        console.log(num)
+      }
+      smallestNumber()
+      const biggestNumber = () => {
+        let arr = [5, 6, 7, 8, 9, 10, 11, 12]
+        let num = 0
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] > num) {
+            num = arr[i]
+          } else num
+        }
+        console.log(num)
+      }
+      biggestNumber()
     </script>
   </body>
 </html>
