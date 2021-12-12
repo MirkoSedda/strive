@@ -238,10 +238,22 @@
       }
       //console.log(maxSum([5, 6, 7, 8, 9, 10], [(1, 2, 3, 4, 5, 6, 7, 8, 9)]))
 
+      //exercise 31
+
       let h1 = document.querySelector('#container')
       console.log(h1)
-      let td = document.querySelectorAll('td')
-      console.log(td)
+
+      //exercise 32
+      let tdNodes = document.querySelectorAll('td')
+
+      //exercise 33
+      let tdContent = ''
+      let td = document.querySelector('td').textContent
+      for (let i = 0; i < tdNodes.length; i++) {
+        console.log(document.querySelectorAll('td')[i].textContent)
+      }
+      console.log(tdContent)
+      //exercise 33
     </script>
   </body>
 </html>
