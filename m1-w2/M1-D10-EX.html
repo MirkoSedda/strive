@@ -250,13 +250,23 @@
       let tdContent = ''
       let td = document.querySelector('td').textContent
       for (let i = 0; i < tdNodes.length; i++) {
-        console.log(document.querySelectorAll('td')[i].textContent)
+        //console.log(document.querySelectorAll('td')[i].textContent)
       }
       console.log(tdContent)
       //exercise 34
       let hackedH1 = document.querySelector('#container')
       hackedH1.innerText = 'Im an awesome new page title'
       //exercise 35
+      function extraRow() {
+        let table = document.querySelector('table')
+        let newRow = table.insertRow()
+        for (let i = 0; i < 5; i++) {
+          newRow.insertCell(0)
+        }
+      }
+      extraRow()
+
+      //exercise 36
     </script>
   </body>
 </html>
