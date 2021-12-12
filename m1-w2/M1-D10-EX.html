@@ -91,7 +91,7 @@
   </head>
 
   <body>
-    <h1 class="border font">Im a heading</h1>
+    <h1 class="border font" id="container">Im a heading</h1>
     <ol>
       <li>element one</li>
       <li>element two</li>
@@ -220,9 +220,9 @@
       const longestArray = (arr1, arr2) =>
         arr1.length >= arr2.length ? arr1 : arr2
 
-      console.log(
-        longestArray([5, 6, 7, 8, 9, 10], [(1, 2, 3, 4, 5, 6, 7, 8, 9)])
-      )
+      // console.log(
+      //   longestArray([5, 6, 7, 8, 9, 10], [(1, 2, 3, 4, 5, 6, 7, 8, 9)])
+      // )
 
       const maxSum = (arr1, arr2) => {
         let sum1 = 0
@@ -236,7 +236,10 @@
 
         sum1 >= sum2 ? sum1 : sum2
       }
-      console.log(maxSum([5, 6, 7, 8, 9, 10], [(1, 2, 3, 4, 5, 6, 7, 8, 9)]))
+      //console.log(maxSum([5, 6, 7, 8, 9, 10], [(1, 2, 3, 4, 5, 6, 7, 8, 9)]))
+
+      let h1 = document.querySelector('#container')
+      console.log(h1)
     </script>
   </body>
 </html>
