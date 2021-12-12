@@ -266,7 +266,29 @@
       }
       extraRow()
 
+      // function writeText(text) {
+      //   let table = document.querySelector('table')
+      //   let row = table.lastChild
+      //   let row2 = row.lastChild
+      //   let row3 = row2.lastChild
+      //   row3.innerText = text
+      //   console.log(row3)
+      // }
+      // writeText('Test')
+
       //exercise 36
+      function addClass() {
+        let row = document.querySelectorAll('tr')
+        for (let i = 0; i < row.length; i++) {
+          row[i].classList.add('test')
+        }
+      }
+      addClass()
+      //exercise 37
+      let links = document.querySelectorAll('a')
+      for (let i = 0; i < links.length; i++) {
+        links[i].style.backgroundColor = 'red'
+      }
     </script>
   </body>
 </html>
