@@ -295,10 +295,21 @@
       //window.onload = () => alert('Page loaded')
 
       //exercise 39
-      let liNode = document.querySelector('ol')
-      let newLi = document.createElement('li')
-      newLi.innerText = 'im a new li'
-      liNode.appendChild(newLi)
+      const addLi = () => {
+        let liNode = document.querySelector('ol')
+        let newLi = document.createElement('li')
+        newLi.innerText = 'im a new li'
+        liNode.appendChild(newLi)
+      }
+      addLi()
+      //exercise 40
+      const emptyLi = () => {
+        let liNode = document.querySelectorAll('li')
+        for (let i = 0; i < liNode.length; i++) {
+          liNode[i].innerText = ''
+        }
+      }
+      emptyLi()
     </script>
   </body>
 </html>
