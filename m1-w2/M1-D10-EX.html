@@ -149,167 +149,167 @@
       <footer class="hidden">im a footer</footer>
     </div>
     <script>
-      // let x = 'John'
-      // let y = 'Doe'
-      // console.log(`${x} <> ${y}`)
-      // let z = {
-      //   name: 'John',
-      //   surname: 'Doe',
-      //   email: 'john.doe@gmail.com',
-      // }
-      // delete z.email
-      // console.log(z)
-      // let h = []
-      // for (let i = 0; i < 11; i++) {
-      //   h.push(`im the string number ${i}`)
-      // }
-      // console.log(h)
-      // for (let i = 0; i < h.length; i++) {
-      //   console.log(h[i])
-      // }
+      let x = 'John'
+      let y = 'Doe'
+      console.log(`${x} <> ${y}`)
+      let z = {
+        name: 'John',
+        surname: 'Doe',
+        email: 'john.doe@gmail.com',
+      }
+      delete z.email
+      console.log(z)
+      let h = []
+      for (let i = 0; i < 11; i++) {
+        h.push(`im the string number ${i}`)
+      }
+      console.log(h)
+      for (let i = 0; i < h.length; i++) {
+        console.log(h[i])
+      }
 
-      // let r = []
-      // for (let i = 0; i < 100; i++) {
-      //   r.push(Math.floor(Math.random() * 100) + 1)
-      // }
-      // console.log(r)
+      let r = []
+      for (let i = 0; i < 100; i++) {
+        r.push(Math.floor(Math.random() * 100) + 1)
+      }
+      console.log(r)
 
-      // let min = 100
-      // for (let i = 0; i < r.length; i++) {
-      //   if (r[i] < min) {
-      //     min = r[i]
-      //   } else min
-      // }
-      // console.log(min)
-      // const smallestNumber = () => {
-      //   let arr = [5, 6, 7, 8, 9, 10, 11, 12]
-      //   let num = 12
-      //   for (let i = 0; i < arr.length; i++) {
-      //     if (arr[i] < num) {
-      //       num = arr[i]
-      //     } else num
-      //   }
-      //   console.log(num)
-      // }
-      // smallestNumber()
-      // const biggestNumber = () => {
-      //   let arr = [5, 6, 7, 8, 9, 10, 11, 12]
-      //   let num = 0
-      //   for (let i = 0; i < arr.length; i++) {
-      //     if (arr[i] > num) {
-      //       num = arr[i]
-      //     } else num
-      //   }
-      //   console.log(num)
-      // }
-      // biggestNumber()
+      let min = 100
+      for (let i = 0; i < r.length; i++) {
+        if (r[i] < min) {
+          min = r[i]
+        } else min
+      }
+      console.log(min)
+      const smallestNumber = () => {
+        let arr = [5, 6, 7, 8, 9, 10, 11, 12]
+        let num = 12
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] < num) {
+            num = arr[i]
+          } else num
+        }
+        console.log(num)
+      }
+      smallestNumber()
+      const biggestNumber = () => {
+        let arr = [5, 6, 7, 8, 9, 10, 11, 12]
+        let num = 0
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] > num) {
+            num = arr[i]
+          } else num
+        }
+        console.log(num)
+      }
+      biggestNumber()
 
-      // let containerArr = []
-      // for (let i = 0; i < 10; i++) {
-      //   let randomNumber = Math.floor(Math.random() * 50)
-      //   let randomNumberArray = []
-      //   for (let i = 0; i < 1; i++) {
-      //     randomNumberArray.push(randomNumber)
-      //   }
-      //   containerArr.push(randomNumberArray)
-      // }
-      // console.log(containerArr)
+      let containerArr = []
+      for (let i = 0; i < 10; i++) {
+        let randomNumber = Math.floor(Math.random() * 50)
+        let randomNumberArray = []
+        for (let i = 0; i < 1; i++) {
+          randomNumberArray.push(randomNumber)
+        }
+        containerArr.push(randomNumberArray)
+      }
+      console.log(containerArr)
 
-      // const longestArray = (arr1, arr2) =>
-      //   arr1.length >= arr2.length ? arr1 : arr2
+      const longestArray = (arr1, arr2) =>
+        arr1.length >= arr2.length ? arr1 : arr2
 
-      // // console.log(
-      // //   longestArray([5, 6, 7, 8, 9, 10], [(1, 2, 3, 4, 5, 6, 7, 8, 9)])
-      // // )
+      // console.log(
+      //   longestArray([5, 6, 7, 8, 9, 10], [(1, 2, 3, 4, 5, 6, 7, 8, 9)])
+      // )
 
-      // const maxSum = (arr1, arr2) => {
-      //   let sum1 = 0
-      //   let sum2 = 0
-      //   for (let i = 0; i < arr1.length; i++) {
-      //     sum1 += arr1[i]
-      //   }
-      //   for (let i = 0; i < arr2.length; i++) {
-      //     sum2 += arr2[i]
-      //   }
+      const maxSum = (arr1, arr2) => {
+        let sum1 = 0
+        let sum2 = 0
+        for (let i = 0; i < arr1.length; i++) {
+          sum1 += arr1[i]
+        }
+        for (let i = 0; i < arr2.length; i++) {
+          sum2 += arr2[i]
+        }
 
-      //   sum1 >= sum2 ? sum1 : sum2
-      // }
-      // //console.log(maxSum([5, 6, 7, 8, 9, 10], [(1, 2, 3, 4, 5, 6, 7, 8, 9)]))
+        sum1 >= sum2 ? sum1 : sum2
+      }
+      //console.log(maxSum([5, 6, 7, 8, 9, 10], [(1, 2, 3, 4, 5, 6, 7, 8, 9)]))
 
-      // //exercise 31
+      //exercise 31
 
-      // let h1 = document.querySelector('#container')
-      // console.log(h1)
+      let h1 = document.querySelector('#container')
+      console.log(h1)
 
-      // //exercise 32
-      // let tdNodes = document.querySelectorAll('td')
+      //exercise 32
+      let tdNodes = document.querySelectorAll('td')
 
-      // //exercise 33
-      // let tdContent = ''
-      // let td = document.querySelector('td').textContent
-      // for (let i = 0; i < tdNodes.length; i++) {
-      //   //console.log(document.querySelectorAll('td')[i].textContent)
-      // }
-      // console.log(tdContent)
-      // //exercise 34
-      // let hackedH1 = document.querySelector('#container')
-      // hackedH1.innerText = 'Im an awesome new page title'
-      // //exercise 35
-      // function extraRow() {
+      //exercise 33
+      let tdContent = ''
+      let td = document.querySelector('td').textContent
+      for (let i = 0; i < tdNodes.length; i++) {
+        //console.log(document.querySelectorAll('td')[i].textContent)
+      }
+      console.log(tdContent)
+      //exercise 34
+      let hackedH1 = document.querySelector('#container')
+      hackedH1.innerText = 'Im an awesome new page title'
+      //exercise 35
+      function extraRow() {
+        let table = document.querySelector('table')
+        let newRow = table.insertRow()
+        for (let i = 0; i < 5; i++) {
+          newRow.insertCell(0)
+        }
+      }
+      extraRow()
+
+      // function writeText(text) {
       //   let table = document.querySelector('table')
-      //   let newRow = table.insertRow()
-      //   for (let i = 0; i < 5; i++) {
-      //     newRow.insertCell(0)
-      //   }
+      //   let row = table.lastChild
+      //   let row2 = row.lastChild
+      //   let row3 = row2.lastChild
+      //   row3.innerText = text
+      //   console.log(row3)
       // }
-      // extraRow()
+      // writeText('Test')
 
-      // // function writeText(text) {
-      // //   let table = document.querySelector('table')
-      // //   let row = table.lastChild
-      // //   let row2 = row.lastChild
-      // //   let row3 = row2.lastChild
-      // //   row3.innerText = text
-      // //   console.log(row3)
-      // // }
-      // // writeText('Test')
+      //exercise 36
+      function addClass() {
+        let row = document.querySelectorAll('tr')
+        for (let i = 0; i < row.length; i++) {
+          row[i].classList.add('test')
+        }
+      }
+      addClass()
 
-      // //exercise 36
-      // function addClass() {
-      //   let row = document.querySelectorAll('tr')
-      //   for (let i = 0; i < row.length; i++) {
-      //     row[i].classList.add('test')
-      //   }
-      // }
-      // addClass()
+      //exercise 37
+      let links = document.querySelectorAll('a')
+      for (let i = 0; i < links.length; i++) {
+        links[i].style.backgroundColor = 'red'
+      }
 
-      // //exercise 37
-      // let links = document.querySelectorAll('a')
-      // for (let i = 0; i < links.length; i++) {
-      //   links[i].style.backgroundColor = 'red'
-      // }
+      //exercise 38
+      //window.onload = () => alert('Page loaded')
 
-      // //exercise 38
-      // //window.onload = () => alert('Page loaded')
+      //exercise 39
+      const addLi = () => {
+        let liNode = document.querySelector('ol')
+        let newLi = document.createElement('li')
+        newLi.innerText = 'im a new li'
+        liNode.appendChild(newLi)
+      }
+      addLi()
 
-      // //exercise 39
-      // const addLi = () => {
-      //   let liNode = document.querySelector('ol')
-      //   let newLi = document.createElement('li')
-      //   newLi.innerText = 'im a new li'
-      //   liNode.appendChild(newLi)
-      // }
-      // addLi()
-
-      // //exercise 40
-      // const emptyLi = () => {
-      //   let liNode = document.querySelectorAll('ul > li')
-      //   for (let i = 0; i < liNode.length; i++) {
-      //     liNode[i].innerText = ''
-      //   }
-      // }
-      // emptyLi()
-      //exercise 41
+      //exercise 40
+      const emptyLi = () => {
+        let liNode = document.querySelectorAll('ul > li')
+        for (let i = 0; i < liNode.length; i++) {
+          liNode[i].innerText = ''
+        }
+      }
+      emptyLi()
+      exercise 41
 
       const hoverAlert = () => {
         let links = document.querySelectorAll('a')
