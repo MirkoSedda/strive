@@ -15,9 +15,7 @@ const moviesArray = () => {
     list.appendChild(item)
   }
   let div = document.createElement('div')
-  let divNode = document.querySelector('div')
-  let body = document.querySelector('body')
-  body.appendChild(divNode)
+  let divNode = document.querySelector('.container1')
   divNode.appendChild(list)
 }
 moviesArray()
