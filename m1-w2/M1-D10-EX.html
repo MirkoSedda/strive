@@ -90,6 +90,7 @@
 
   <body>
     <h1 class="border font" id="container">Im a heading</h1>
+    <button class="hideImages">Hide images!</button>
     <ol>
       <li>element one</li>
       <li>element two</li>
@@ -218,9 +219,9 @@
       const longestArray = (arr1, arr2) =>
         arr1.length >= arr2.length ? arr1 : arr2
 
-      // console.log(
-      //   longestArray([5, 6, 7, 8, 9, 10], [(1, 2, 3, 4, 5, 6, 7, 8, 9)])
-      // )
+      console.log(
+        longestArray([5, 6, 7, 8, 9, 10], [(1, 2, 3, 4, 5, 6, 7, 8, 9)])
+      )
 
       const maxSum = (arr1, arr2) => {
         let sum1 = 0
@@ -234,7 +235,7 @@
 
         sum1 >= sum2 ? sum1 : sum2
       }
-      //console.log(maxSum([5, 6, 7, 8, 9, 10], [(1, 2, 3, 4, 5, 6, 7, 8, 9)]))
+      console.log(maxSum([5, 6, 7, 8, 9, 10], [(1, 2, 3, 4, 5, 6, 7, 8, 9)]))
 
       //exercise 31
 
@@ -309,8 +310,8 @@
         }
       }
       emptyLi()
-      exercise 41
 
+      //exercise 41
       const hoverAlert = () => {
         let links = document.querySelectorAll('a')
         for (let i = 0; i < links.length; i++) {
@@ -320,6 +321,19 @@
         }
       }
       hoverAlert()
+
+      //exercise 42
+      const hideImages = () => {
+        let button = document.querySelector('.hideImages')
+        console.log(button)
+        let images = document.querySelectorAll('img')
+        button.addEventListener('click', function () {
+          for (let i = 0; i < images.length; i++) {
+            images[i].classList.add('hidden')
+          }
+        })
+      }
+      hideImages()
     </script>
   </body>
 </html>
