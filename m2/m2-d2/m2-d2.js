@@ -14,7 +14,10 @@ const moviesArray = () => {
     item.innerText = genres[i]
     list.appendChild(item)
   }
-  let container = document.querySelector('.container')
-  container.appendChild(list)
+  let div = document.createElement('div')
+  let divNode = document.querySelector('div')
+  let body = document.querySelector('body')
+  body.appendChild(divNode)
+  divNode.appendChild(list)
 }
 moviesArray()
