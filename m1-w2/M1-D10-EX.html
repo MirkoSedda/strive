@@ -95,7 +95,8 @@
 
     <button class="hideImages">Hide images!</button>
     <button class="hideTable">Hide table!</button>
-    <button class="deleteHeader">Delete a letter form header</button>
+    <button class="deleteHeader">Delete a letter from the header!</button>
+    <button class="deleteCell">Delete a cell!</button>
 
     <ol>
       <li>element one</li>
@@ -393,6 +394,33 @@
         }
       }
       changeColor()
+
+      //exercise 47
+      // const deleteCell = () => {
+      //   let btn4 = document
+      //     .querySelector('.deleteCell')
+      //     .addEventListener('click', function () {
+      //       let cells = document.querySelectorAll('td')
+      //       for (let i = 0; i < cells.length; i++) {
+      //         cells[i].classList.add('hidden')
+      //       }
+      //     })
+      // }
+      // deleteCell()
+
+      //exercise 48
+      const pinkCells = () => {
+        let cells = document.querySelectorAll('td')
+        for (let i = 0; i < cells.length; i++) {
+          cells[i].addEventListener('mouseover', function () {
+            cells[i].style.borderColor = 'pink'
+            cells[i].style.borderWidth = '5px'
+          })
+        }
+      }
+      pinkCells()
+
+      //exercise 49
     </script>
   </body>
 </html>
