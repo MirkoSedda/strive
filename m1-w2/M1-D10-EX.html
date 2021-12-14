@@ -89,9 +89,13 @@
   </head>
 
   <body>
-    <h1 class="border font" id="container">Im a heading</h1>
+    <div class="h1">
+      <h1 class="border font" id="container">Im a heading</h1>
+    </div>
+
     <button class="hideImages">Hide images!</button>
     <button class="hideTable">Hide table!</button>
+    <button class="deleteHeader">Delete a letter form header</button>
 
     <ol>
       <li>element one</li>
@@ -138,9 +142,9 @@
             ><img src="https://via.placeholder.com/50" alt=""
           /></a>
         </td>
-        <td colspan="2">I'm your third cell.</td>
-        <td>I'm your fourth cell.</td>
-        <td>I'm your fourth cell.</td>
+        <td colspan="2">1</td>
+        <td>2</td>
+        <td>3</td>
       </tr>
     </table>
     <hr />
@@ -345,6 +349,50 @@
         })
       }
       hideTable()
+
+      //exercise 44
+      // const countCellsContent = () => {
+      //   let cells = document.querySelectorAll('td')
+      //   let sum = 0
+      //   for (let i = 0; i < cells.length; i++) {
+      //     if (1 * cells[i].textContent == typeof Number) {
+      //          sum += cells[i].textContent
+      //       console.log(cells[i].textContent)
+      //     }
+      //   }
+      // }
+      // countCellsContent()
+
+      //exercise 45
+      // const deleteLetter = () => {
+      //   let btn3 = document.querySelector('.deleteHeader')
+      //   let header = document.querySelector('#container').innerText
+      //   let newHeader = document.querySelector('#container')
+      //   let div = document.querySelector('.h1')
+      //   btn3.addEventListener('click', function (e) {
+      //     header = header.substring(0, header.length - 1)
+      //     div.appendChild(newHeader)
+      //   })
+      // }
+      // deleteLetter()
+
+      //exercise 46
+      const changeColor = () => {
+        const randomColor = () => {
+          let rChanel = Math.floor(Math.random() * 255)
+          let bChannel = Math.floor(Math.random() * 255)
+          let rChannel = Math.floor(Math.random() * 255)
+          let alphaValue = Math.floor(Math.random() * 11) / 10
+          return `rgba(${rChannel}, ${bChannel}, ${rChannel}, ${alphaValue})`
+        }
+        let cells = document.querySelectorAll('td')
+        for (let i = 0; i < cells.length; i++) {
+          cells[i].addEventListener('click', function () {
+            cells[i].style.backgroundColor = randomColor()
+          })
+        }
+      }
+      changeColor()
     </script>
   </body>
 </html>
