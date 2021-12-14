@@ -91,6 +91,8 @@
   <body>
     <h1 class="border font" id="container">Im a heading</h1>
     <button class="hideImages">Hide images!</button>
+    <button class="hideTable">Hide table!</button>
+
     <ol>
       <li>element one</li>
       <li>element two</li>
@@ -324,16 +326,25 @@
 
       //exercise 42
       const hideImages = () => {
-        let button = document.querySelector('.hideImages')
-        console.log(button)
+        let btn1 = document.querySelector('.hideImages')
         let images = document.querySelectorAll('img')
-        button.addEventListener('click', function () {
+        btn1.addEventListener('click', function () {
           for (let i = 0; i < images.length; i++) {
             images[i].classList.add('hidden')
           }
         })
       }
       hideImages()
+
+      //exercise 43
+      const hideTable = () => {
+        let btn2 = document.querySelector('.hideTable')
+        let table = document.querySelector('table')
+        btn2.addEventListener('click', function () {
+          table.classList.add('hidden')
+        })
+      }
+      hideTable()
     </script>
   </body>
 </html>
