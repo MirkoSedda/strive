@@ -1,27 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- MANDATORY JS EXERCISES (continue from yesterday's file for this exercise)
-    1) Create two inputs for picking up colors in the page, and a button with "Apply Colors" as text
-    2) Grab all <li> in the page from the DOM, and save them in a variable called "listItems"
-    3) Grab the inputs references via DOM manipulation and save them in variables
-    4) Create a function and attach it to the "Apply Colors" button click event
-    5) Cycle listItems inside the function. Verify that the function and the loop work by logging in the console 
-        each item from the loop every time the button gets clicked
-    6) Move the inputs references in the function. Use the first input value as background-color for the item, and the second one for the text color.
-
-    If you receive black as a color check where you have the inputs references.
-    You should now see the list-items color and background-color change at the click of the button.
--->
-
-<head>
+  <head>
     <!-- M2-D3 ASSIGNMENT RULES
-        - This challenge should be done in pairs, go in Eduflow to find who you are paired with
-        - Implement one exercise each, switching side from driver and navigator frequently
-        - We suggest you to use Zoom or Google Hangouts to speak and look at each other throughout the whole activity
-
-        - The exercise must be pushed to the repository and linked on EduFlow by the end of the day
-        - You can google / use StackOverflow BUT we suggest you to use just the material provided
-        - To test the page, open it with your browser and use the inspector.
         - Use Bootstrap4.6 classes to arrange the page layout and components.
         - Use containers, rows and cols in order to have a working responsive layout.
 
@@ -63,8 +43,24 @@
         Ex 15) Create a function that adds a "HOT" badge to all the "Welcome Summer" offers
         Ex 16) Create a function to delete all "cards" from the page
       -->
-</head>
+  </head>
 
-<body></body>
+  <body>
+    <button>Apply colors</button>
+    <label for="firstInputId"></label>
+    <input type="color" name="firstInput" id="firstInputId" value="" />
 
+    <label for="secondInputId"></label>
+    <input type="color" name="" id="secondInputId" value="" />
+    <p>
+      Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur,
+      adipisicing elit. Distinctio, labore!
+    </p>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <script src="m2-d3.js"></script>
+  </body>
 </html>
