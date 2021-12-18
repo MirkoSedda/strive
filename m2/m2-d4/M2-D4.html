@@ -45,6 +45,11 @@
     <h2>How many teams do you want?</h2>
     <input type="number" class="input2">
     <button class='btn2'>Generate teams</button>
+    <div class='team'>
+      <div class="row">
+        <div class="col"></div>
+      </div>
+    </div>
     
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -57,32 +62,48 @@
       crossorigin="anonymous"
     ></script>
      <script>
-      let ul1 = document.querySelector('.ul1')
-      
-      let btn1 = document.querySelector('.btn1')
       let names = []
-       btn1.addEventListener('click', function(e){
+      
+       const addMembers = () => {
+        let ul1 = document.querySelector('.ul1')
+        let btn1 = document.querySelector('.btn1')
+        
+        btn1.addEventListener('click', function(e){
         let input = document.querySelector('.input').value
         let li = document.createElement('li')
         li.innerHTML = input
         ul1.appendChild(li)
         names.push(input)
-        console.log(names)
        })
+       }
+       addMembers()
        
-       let btn2 = document.querySelector('.btn2')
-       let input2 = document.querySelector('.input2')
+       const createTeams = () => {
+        let btn2 = document.querySelector('.btn2')
+        let row = document.querySelector('.row')
+        btn2.addEventListener('click', function(e){
+          let input2 = document.querySelector('.input2').value
+          for (let i = 0; i < input2; i++){
+            row.appendChild(`<div class="col"></div>`)
+            
+          }
+        })
+        
+        
+         
+       }
+       createTeams()
        
-       btn2.addEventListener('click', function(e){
-         for (let i = 0; i < input2.value; i++){
-           let ul = document.createElement('ul')
-           ul.classList.add(`ul${i}`)
-           let li = document.createElement('li')
-           li.innerText = names[0]
-           let newUl = document.querySelector(`.ul${i}`)
-           newUl.appendChild(li)
-         }
-       })
+       
+      //  btn2.addEventListener('click', function(e){
+      //    for (let i = 0; i < input2.value; i++){
+      //      let ul = document.createElement('ul')
+      //      ul.classList.add(`ul${i}`)
+      //      let li = document.createElement('li')
+      //      li.innerText = names[0]
+      //      let newUl = document.querySelector(`.ul${i}`)
+      //    }
+      //  })
     </script>
   </body>
 </html>
