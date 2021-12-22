@@ -1,0 +1,184 @@
+<!-- saved from url=(0436)https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/303305604340419.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2TAWW44RCEE6YREN%2F20211208%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20211208T131140Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27M1-D8.html&X-Amz-Signature=943f4ccbee210b1239bb751de1148fa173070963f74fc79c05cf543b1d0b6871 -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <style>
+      .myHeading {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">This is the title of the page</h1>
+      <h2>This is the subtitle of the page</h2>
+    </header>
+
+    <main>
+      <hr />
+
+      <ul id="firstList">
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+      </ul>
+
+      <ul id="secondList">
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+      </ul>
+
+      <a
+        href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/strive.school"
+        >This link goes to Strive School</a
+      >
+
+      <section>
+        <p>This text is just for the exercise</p>
+      </section>
+
+      <section>
+        <input
+          type="text"
+          id="input-field"
+          placeholder="input field for the exercise"
+        />
+      </section>
+    </main>
+
+    <section>
+      <p>And this text is just for the exercise too!</p>
+      <h2 style="color: red">
+        Save this page on your computer and open it with VSCode to get the
+        questions!
+      </h2>
+      <footer id="footer">here i am!</footer>
+    </section>
+    <script>
+      /* EXERCISE 1
+       Write a function for changing the title of the document in something else.
+      */
+      const changeTitle = newTitle => {
+        const title = document.getElementById('title')
+        title.innerText = 'Im a new title'
+      }
+      changeTitle()
+      /* EXERCISE 2
+       Write a function for changing the class of the title of the page in "myHeading".
+      */
+
+      const addClassToTitle = () => {
+        const title = document.getElementById('title')
+        title.classList.add('myHeading')
+      }
+      addClassToTitle()
+      /* EXERCISE 3
+       Write a function for changing the text of only the p which are children of a div.
+      */
+
+      const changePcontent = () => {
+        const children = document.querySelectorAll('div p')
+        for (let i = 0; i < children.length; i++) {
+          children[i].innerText = 'im a child of a div'
+        }
+      }
+      changePcontent()
+      /* EXERCISE 4
+       Write a function for changing the href property of every link to https://www.google.com
+      */
+
+      const changeUrls = () => {
+        const aTags = document.querySelectorAll('a')
+        for (let i = 0; i < aTags.length; i++) {
+          aTags[i].href = 'http://www.google.com/'
+        }
+      }
+      changeUrls()
+
+      /* EXERCISE 5
+       Write a function for adding a new list item in the second unordered list.
+      */
+
+      const addToTheSecond = () => {
+        const node = document.createElement('li')
+        const textnode = document.createTextNode(
+          'im a new li created by javascript'
+        )
+        node.appendChild(textnode)
+        document.getElementById('secondList').appendChild(node)
+      }
+      addToTheSecond()
+      /* EXERCISE 6
+       Write a function for adding a second paragraph to the first div.
+      */
+
+      const addParagraph = () => {
+        const newParagraph = document.createElement('p')
+        newParagraph.innerText = 'I am a 2nd paragraph to the 1st div'
+        const parentNode = document.getElementsByTagName('div')
+        parentNode[0].appendChild(newParagraph)
+      }
+      addParagraph()
+      /* EXERCISE 7
+       Write a function for making the first unordered list disappear.
+      */
+
+      const firstUlDisappear = () => {
+        const ulList = document.getElementById('firstList')
+        ulList.hidden = true
+      }
+      firstUlDisappear()
+
+      /* EXERCISE 8
+       Write a function for making the background of every unordered list green.
+      */
+
+      const paintItGreen = () => {
+        let ulLists = document.getElementsByTagName('ul')
+        for (let ulList of ulLists) {
+          ulList.style.backgroundColor = 'green'
+        }
+      }
+      paintItGreen()
+
+      /* EXERCISE 9
+       Make the heading of the page change color every time the user clicks on it.
+      */
+
+      document.getElementById('title').addEventListener('click', function () {
+        let random = '#' + Math.floor(Math.random() * 16777215).toString(16)
+        document.getElementById('title').style.color = random
+      })
+      /* EXERCISE 10
+       Change the footer text with something else when the user clicks on it.
+      */
+
+      const changeFooterText = () => {
+        document.getElementById('footer').innerText =
+          'here i am, but im another one lol'
+      }
+      changeFooterText()
+      /* EXERCISE 11
+       Attach an event listener to the input field in the page for console logging its value just after any keystroke.
+      */
+
+      const inputField = document
+        .getElementById('input-field')
+        .addEventListener('keyup', logKey)
+      const logKey = e => console.log(e.target.value)
+
+      /* EXERCISE 12
+       Create a welcome alert message when the page successfully loads.
+      */
+
+      window.onload = function () {
+        //alert('welcome user, the page has loaded successfully')
+      }
+
+      /* EXERCISE 13
+       Use HTML5 tags to properly provide semantic meaning to the different portions of the page.
+      */
+    </script>
+  </body>
+</html>
